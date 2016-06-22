@@ -1,4 +1,7 @@
 # ArkanoidPool
+
+Demo - https://www.youtube.com/watch?v=I1HOrgrt4xQ&feature=youtu.be
+
 Для сборки  игры необходимы библиотеки glaux(загрузка текстур) и glut. Поскольку glaux библиотека старая (что является причиной к тому, чтобы её заменить), скачать её можно, например, здесь http://mycodelog.com/2010/05/15/gllibs/ 
 
 Включение библиотек в Visual Studio:
