@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C3B0C559-BCB8-4195-8579-D17AEC8A221B}</ProjectGuid>
+    <RootNamespace>ArkanoidPool</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Workspace\MyLibraries\include;$(ProjectDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Workspace\MyLibraries\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Glaux.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Workspace\MyLibraries\include;$(ProjectDir)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>Glaux.lib;glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Workspace\MyLibraries\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="src\Dispatcher\Dispatcher.cpp" />
+    <ClCompile Include="src\Game\assets_description.cpp" />
+    <ClCompile Include="src\Game\Game.cpp" />
+    <ClCompile Include="src\Game\game_settings.cpp" />
+    <ClCompile Include="src\Game\States\level.cpp" />
+    <ClCompile Include="src\Game\States\introstate.cpp" />
+    <ClCompile Include="src\Game\States\losestate.cpp" />
+    <ClCompile Include="src\Game\States\winstate.cpp" />
+    <ClCompile Include="src\Model\Ball.cpp" />
+    <ClCompile Include="src\Model\Brick.cpp" />
+    <ClCompile Include="src\Model\Model.cpp" />
+    <ClCompile Include="src\Model\Scate.cpp" />
+    <ClCompile Include="src\Deserializer\jsoncpp.cpp" />
+    <ClCompile Include="src\Deserializer\Deserializer.cpp" />
+    <ClCompile Include="src\View\TextureManager.cpp" />
+    <ClCompile Include="src\View\textures_description.cpp" />
+    <ClCompile Include="src\View\View.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Dispatcher\Dispatcher.h" />
+    <ClInclude Include="include\Dispatcher\IEvent.h" />
+    <ClInclude Include="include\Game\assets_description.h" />
+    <ClInclude Include="include\Game\Game.h" />
+    <ClInclude Include="include\Game\game_settings.h" />
+    <ClInclude Include="include\Game\IObserver.h" />
+    <ClInclude Include="include\Game\States\level.h" />
+    <ClInclude Include="include\Game\States\gamestate.h" />
+    <ClInclude Include="include\Game\States\introstate.h" />
+    <ClInclude Include="include\Game\States\losestate.h" />
+    <ClInclude Include="include\Game\States\winstate.h" />
+    <ClInclude Include="include\Model\Ball.h" />
+    <ClInclude Include="include\Model\Brick.h" />
+    <ClInclude Include="include\Model\Model.h" />
+    <ClInclude Include="include\Model\Scate.h" />
+    <ClInclude Include="include\Deserializer\json-forwards.h" />
+    <ClInclude Include="include\Deserializer\json.h" />
+    <ClInclude Include="include\Deserializer\Deserializer.h" />
+    <ClInclude Include="include\View\TextureManager.h" />
+    <ClInclude Include="include\View\textures_description.h" />
+    <ClInclude Include="include\View\View.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
